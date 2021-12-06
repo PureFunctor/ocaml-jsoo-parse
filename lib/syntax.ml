@@ -1,3 +1,5 @@
+[@@@ocaml.warning "-39"]
+
 type bin_op =
   | Plus
   | Minus

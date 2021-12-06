@@ -15,6 +15,7 @@ Welcome to Node.js v16.13.0.
 Type ".help" for more information.
  > const { parse } = require("./_build/default/bin/main.bc.js")
 undefined
-'[1,1,[0,10],[1,0,[0,10],[1,2,[0,10],[0,10]]]]'
+ > parse("0 - 0 + 1 + 1 * (10 / 10 - 10)")
+'[1,0,[1,0,[1,1,[0,0],[0,0]],[0,1]],[1,2,[0,1],[1,1,[1,3,[0,10],[0,10]],[0,10]]]]'
  > 
 #+end_src
