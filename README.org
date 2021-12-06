@@ -13,9 +13,8 @@ $ dune build
 $ node
 Welcome to Node.js v16.13.0.
 Type ".help" for more information.
-> const { parse } = require("./_build/default/bin/main.bc.js")
+ > const { parse } = require("./_build/default/bin/main.bc.js")
 undefined
-> parse("20 + 42 * 42 + 20")
-'[1,[1,[0,20],0,[1,[0,42],1,[0,42]]],0,[0,20]]'
-> 
+'[1,1,[0,10],[1,0,[0,10],[1,2,[0,10],[0,10]]]]'
+ > 
 #+end_src
