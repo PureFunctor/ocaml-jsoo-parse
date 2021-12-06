@@ -1,0 +1,21 @@
+* ocaml-jsoo-parse
+An example of a =menhir= / =ocamllex= -based parser compiled to JavaScript using
+=js_of_ocaml=. Exposes a =parse= function that outputs the JSON representation of the AST type
+defined in OCaml code. This makes it possible to deserialize the value into another representation,
+such as an equivalent data type in PureScript.
+
+** Usage
+Ensure that you have an OCaml and Node.js installation.
+#+begin_src sh
+$ dune build
+...
+
+$ node
+Welcome to Node.js v16.13.0.
+Type ".help" for more information.
+> const { parse } = require("./_build/default/bin/main.bc.js")
+undefined
+> parse("20 + 42 * 42 + 20")
+'[1,[1,[0,20],0,[1,[0,42],1,[0,42]]],0,[0,20]]'
+> 
+#+end_src

@@ -1,0 +1,9 @@
+(library
+ (name expr)
+ (libraries js_of_ocaml)
+ (preprocess (pps js_of_ocaml-ppx)))
+
+(menhir
+ (modules parser))
+
+(ocamllex lexer)
